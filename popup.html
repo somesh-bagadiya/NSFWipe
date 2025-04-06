@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NSFWipe</title>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+  <style>
+    body {
+      width: 350px;
+      padding: 15px;
+      font-family: Arial, sans-serif;
+      background: #1a1a1a;
+      color: #e0e0e0;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+    .header h2 {
+      margin: 0;
+      font-size: 1.5em;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .header h2 img {
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+    }
+    .status {
+      padding: 8px;
+      border-radius: 4px;
+      background-color: #2d3436;
+      color: #FFA500;
+      text-align: center;
+      margin-bottom: 15px;
+      border: 1px solid #FFA500;
+    }
+    .input-group {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    input[type="text"] {
+      flex: 1;
+      padding: 8px;
+      border: 1px solid #444;
+      border-radius: 4px;
+      background: #333;
+      color: #fff;
+    }
+    input[type="text"]::placeholder {
+      color: #888;
+    }
+    .button {
+      padding: 8px 16px;
+      background-color: #FFA500;
+      color: #1a1a1a;
+      font-weight: bold;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+    .button:hover {
+      background-color: #FF8C00;
+      color: #1a1a1a;
+    }
+    .patterns-list {
+      max-height: 200px;
+      overflow-y: auto;
+      border: 1px solid #444;
+      border-radius: 4px;
+      padding: 10px;
+      background: #2d2d2d;
+    }
+    .pattern-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px;
+      border-bottom: 1px solid #444;
+      color: #e0e0e0;
+    }
+    .pattern-item:last-child {
+      border-bottom: none;
+    }
+    .delete-btn {
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #f44336;
+      background: none;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: all 0.2s;
+    }
+    .delete-btn:hover {
+      background-color: rgba(244, 67, 54, 0.1);
+    }
+    .tabs {
+      display: flex;
+      border: 1px solid #444;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .tab {
+      flex: 1;
+      padding: 8px;
+      text-align: center;
+      cursor: pointer;
+      background: #2d2d2d;
+      border: none;
+      color: #e0e0e0;
+      transition: all 0.2s;
+    }
+    .tab:hover {
+      background: #3d3d3d;
+    }
+    .tab.active {
+      background: #FFA500;
+      color: #1a1a1a;
+      font-weight: bold;
+    }
+    .view-history-btn {
+      padding: 8px 12px;
+      background-color: #FFA500;
+      color: #1a1a1a;
+      font-weight: bold;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.9em;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: background-color 0.2s;
+    }
+    .view-history-btn:hover {
+      background-color: #FF8C00;
+      color: #1a1a1a;
+    }
+    .view-history-btn img {
+      width: 16px;
+      height: 16px;
+      object-fit: contain;
+    }
+    .clear-history-btn {
+      width: 100%;
+      padding: 10px;
+      background-color: #d32f2f;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background-color 0.2s;
+    }
+    .clear-history-btn:hover {
+      background-color: #b71c1c;
+    }
+    /* Buy Me a Coffee Button - Standard Creator Style */
+    .bmc-btn-container {
+      padding: 20px 0;
+      text-align: center;
+    }
+    .bmc-btn {
+      min-width: 210px;
+      color: #1a1a1a;
+      font-weight: bold;
+      background-color: #FF813F;
+      border-radius: 8px;
+      padding: 10px 24px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-family: "Cookie", cursive;
+      font-size: 28px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+    }
+    .bmc-btn:hover {
+      background-color: #FF9C5A;
+      color: #1a1a1a;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+    .bmc-btn img {
+      height: 28px;
+      width: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h2>
+        <img src="icons/icon16.png" alt="NSFWipe Icon">
+        NSFWipe
+      </h2>
+      <button id="viewBlocked" class="view-history-btn">
+        <img src="icons/icon16.png" alt="View History">
+        View History
+      </button>
+    </div>
+    
+    <div class="status">
+      Active and protecting your privacy
+    </div>
+
+    <div class="tabs">
+      <button class="tab active" id="tabDomains">Domains</button>
+      <button class="tab" id="tabKeywords">Keywords</button>
+    </div>
+
+    <div id="domainSection">
+      <div class="input-group">
+        <input type="text" id="newDomain" placeholder="Enter domain (e.g., example.com)">
+        <button class="button" id="addDomain">Add</button>
+      </div>
+      <div class="patterns-list" id="customDomains"></div>
+    </div>
+
+    <div id="keywordSection" style="display: none;">
+      <div class="input-group">
+        <input type="text" id="newKeyword" placeholder="Enter keyword">
+        <button class="button" id="addKeyword">Add</button>
+      </div>
+      <div class="patterns-list" id="customKeywords"></div>
+    </div>
+
+    <button class="clear-history-btn" id="clearHistory">Clear All History</button>
+    
+    <div class="bmc-btn-container">
+      <a href="https://www.buymeacoffee.com/yourusername" target="_blank" class="bmc-btn">
+        <img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a coffee">
+        Buy me a coffee
+      </a>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html> 

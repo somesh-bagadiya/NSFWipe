@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>NSFWipe - History</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="blocked_history.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        <img src="icons/icon16.png" alt="NSFWipe Icon">
+        NSFWipe History
+      </h1>
+      
+      <div class="stats" id="statsContainer">
+        <strong>Total Sites Blocked:</strong> <span id="totalBlocked">0</span><br>
+        <strong>Domain-based Blocks:</strong> <span id="domainBlocks">0</span><br>
+        <strong>Keyword-based Blocks:</strong> <span id="keywordBlocks">0</span>
+      </div>
+
+      <div class="history-grid">
+        <div class="history-column">
+          <div class="column-header">
+            <h2>Domain-based Blocks</h2>
+            <button class="sort-toggle" id="domainSortToggle" data-ascending="false">
+              <span class="time-icon">⏱️</span>
+              <span class="sort-icon">⬇️</span>
+            </button>
+          </div>
+          <div id="domainHistoryContainer" class="history-container">
+            <div class="empty-message">No domain-based blocks to display.</div>
+          </div>
+        </div>
+        <div class="history-column">
+          <div class="column-header">
+            <h2>Keyword-based Blocks</h2>
+            <button class="sort-toggle" id="keywordSortToggle" data-ascending="false">
+              <span class="time-icon">⏱️</span>
+              <span class="sort-icon">⬇️</span>
+            </button>
+          </div>
+          <div id="keywordHistoryContainer" class="history-container">
+            <div class="empty-message">No keyword-based blocks to display.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="deletion-log">
+        <h2>Deletion Log</h2>
+        <div id="deletionLogContainer">
+          <div class="empty-message">No deletion logs available.</div>
+        </div>
+      </div>
+
+      <div class="bmc-btn-container">
+        <a href="https://www.buymeacoffee.com/yourusername" target="_blank" class="bmc-btn">
+          <img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a coffee">
+          Buy me a coffee
+        </a>
+      </div>
+    </div>
+    <script src="blocked_history.js"></script>
+  </body>
+</html> 
