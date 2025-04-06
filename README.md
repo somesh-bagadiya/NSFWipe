@@ -1,8 +1,17 @@
 # NSFWipe
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Chrome Web Store](https://img.shields.io/chrome-web-store/v/nsfwipe)](your_store_link_here)
+[![Firefox Add-ons](https://img.shields.io/amo/v/nsfwipe)](your_firefox_link_here)
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Support-orange.svg)](https://www.buymeacoffee.com/thedlc)
+
 A privacy-focused browser extension that automatically manages and cleans your browsing history by removing NSFW content and maintaining a clean browsing environment.
 
-## Features
+<p align="center">
+  <img src="icons/icon128.png" alt="NSFWipe Logo">
+</p>
+
+## 🌟 Features
 
 - 🚫 Automatic NSFW content blocking and removal
 - 🔒 Privacy-focused with local-only storage
@@ -14,9 +23,11 @@ A privacy-focused browser extension that automatically manages and cleans your b
 - 🌙 Dark mode support
 - 🌐 Cross-browser compatibility
 
-## Installation
+## 📥 Installation
 
 ### Chrome Web Store
+
+[![Chrome Web Store](https://img.shields.io/chrome-web-store/users/nsfwipe)](your_store_link_here)
 
 1. Install from the [Chrome Web Store](your_store_link_here)
 2. Click the extension icon to open the management interface
@@ -24,11 +35,13 @@ A privacy-focused browser extension that automatically manages and cleans your b
 
 ### Firefox Add-ons
 
+[![Firefox Add-ons](https://img.shields.io/amo/users/nsfwipe)](your_firefox_link_here)
+
 1. Install from [Firefox Add-ons](your_firefox_link_here)
 2. Click the extension icon to open the management interface
 3. Start adding custom domains or keywords to block
 
-## Usage
+## 🚀 Usage
 
 ### Basic Usage
 
@@ -51,14 +64,14 @@ A privacy-focused browser extension that automatically manages and cleans your b
 - All settings are stored locally for privacy
 - Toggle between light and dark themes
 
-## Privacy
+## 🔒 Privacy
 
 - No data collection or transmission
 - All data stored locally
 - No external server communication
 - Clear history and logs anytime
 
-## Requirements
+## ⚙️ Requirements
 
 - Chrome/Chromium-based browser version 88 or higher
 - Firefox version 109.0 or higher
@@ -68,7 +81,13 @@ A privacy-focused browser extension that automatically manages and cleans your b
   - Tabs (for management)
   - Web Navigation (for monitoring)
 
-## Development
+## 👨‍💻 Development
+
+### Prerequisites
+
+- Git
+- Chrome or Firefox browser
+- Basic knowledge of JavaScript and browser extensions
 
 ### Setup
 
@@ -95,40 +114,62 @@ cd nsfwipe
 - Click "Load Temporary Add-on"
 - Select the manifest.json file
 
-### Building
+### Project Structure
 
-The extension is ready to use as-is, no build step required.
+```
+nsfwipe/
+├── icons/                 # Extension icons
+├── background.js         # Background service worker
+├── popup.html           # Extension popup interface
+├── popup.js            # Popup functionality
+├── blocked_history.html # History view
+├── blocked_history.js  # History functionality
+├── blocked_history.css # History styling
+├── manifest.json      # Extension manifest
+├── LICENSE           # MIT license
+└── README.md        # This file
+```
 
-## Contributing
+## 🤝 Contributing
+
+We welcome contributions! Please follow these steps:
 
 1. Fork the repository
-2. Create your feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-## Support the Project
+Please ensure your PR adheres to:
+
+- Consistent code style
+- Proper documentation
+- Meaningful commit messages
+- No unnecessary dependencies
+
+## ☕ Support the Project
 
 If you find this extension helpful, consider supporting its development:
 
-[![Buy Me A Coffee](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/yourusername)
+[![Buy Me A Coffee](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/thedlc)
 
 Your support helps maintain and improve the extension!
 
-## License
+## 📄 License
 
-MIT License - see LICENSE file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Support
+## 🆘 Support
 
-For support, please:
+For support:
 
-- Open an issue on GitHub
+- [Open an issue](https://github.com/yourusername/nsfwipe/issues)
+- [View existing issues](https://github.com/yourusername/nsfwipe/issues?q=is%3Aissue)
 - Contact: [Your Contact Information]
 
-## Changelog
+## 📝 Changelog
 
-### Version 1.0
+### Version 1.0.0 (YYYY-MM-DD)
 
 - Initial release
 - Basic NSFW filtering
@@ -137,3 +178,9 @@ For support, please:
 - Export functionality
 - Cross-browser support
 - Dark mode implementation
+
+## 🙏 Acknowledgments
+
+- All contributors who have helped this project grow
+- The open-source community for inspiration and tools
+- Users who provide valuable feedback and suggestions
