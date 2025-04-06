@@ -12,11 +12,13 @@
   "permissions": [
     "storage",
     "history",
-    "tabs",
+    "activeTab",
     "webNavigation"
   ],
   "host_permissions": [
-    "<all_urls>"
+    "https://*.google.com/*",
+    "https://*.bing.com/*",
+    "https://*.yahoo.com/*"
   ],
   "background": {
     "service_worker": "background.js"
